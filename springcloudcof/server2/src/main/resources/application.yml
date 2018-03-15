@@ -1,0 +1,19 @@
+server:
+  port: 8889
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/houlong123/springcloud.git
+          username: 2576759105@qq.com
+          password: houlong0781
+          search-paths: /springcloudcof/cofig
+          force-pull: true  # 在不加该配置时，有可能会报：Cannot pull from remote https://github.com/houlong123/springcloud.git, the working tree is not clean.解决方案网址为：https://github.com/spring-cloud/spring-cloud-config/blob/master/docs/src/main/asciidoc/spring-cloud-config.adoc#force-pull-in-git-repositories
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/

@@ -3,5 +3,12 @@ spring:
     config:
       name: config  # 对应git库中配置我呢间的 {application} 部分
       profile: dev  # 对应git库中配置我呢间的 {profile} 部分
-      uri: http://localhost:8888/   # 配置中心的具体地址
       label: master # 对应git的分支。如果配置中心使用的是本地存储，则该参数无用
+      discovery:
+        enabled: true   # 开启Config服务发现支持
+        service-id: config-server # 指定server端的name,也就是server端spring.application.name的值
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/  # 指向配置中心的地址

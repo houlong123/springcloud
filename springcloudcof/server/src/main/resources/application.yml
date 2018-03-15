@@ -7,11 +7,12 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/XXX/springcloud.git
-          username: XXX
-          password: XXX
+          uri: https://github.com/xxx/springcloud.git
+          username: xxx
+          password: xxx
           search-paths: /springcloudcof/cofig
-          force-pull: true  # 在不加该配置时，有可能会报：Cannot pull from remote https://github.com/XXX/springcloud.git, the working tree is not clean.解决方案网址为：https://github.com/spring-cloud/spring-cloud-config/blob/master/docs/src/main/asciidoc/spring-cloud-config.adoc#force-pull-in-git-repositories
+          force-pull: true  # 在不加该配置时，有可能会报：Cannot pull from remote https://github.com/xxx/springcloud.git, the working tree is not clean.解决方案网址为：https://github.com/spring-cloud/spring-cloud-config/blob/master/docs/src/main/asciidoc/spring-cloud-config.adoc#force-pull-in-git-repositories
+
 eureka:
   client:
     serviceUrl:

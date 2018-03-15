@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: zipkin
+server:
+  port: 9898
+
+eureka:
+  client:
+    service-url:
+      default: http://localhost:8000/eureka/
+
